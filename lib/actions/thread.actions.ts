@@ -48,7 +48,6 @@ export async function fetchPosts(pageNumber = 1, pageSize = 20) {
   return { posts, isNext };
 }
 
-
 interface Params {
   text: string,
   author: string,
@@ -56,7 +55,8 @@ interface Params {
   path: string,
 }
 
-export async function createThread({ text, author, communityId, path }: Params) {
+export async function createThread({ text, author, communityId, path }: Params
+) {
   try {
     connectToDB();
 
